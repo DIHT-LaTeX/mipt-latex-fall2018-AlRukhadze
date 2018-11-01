@@ -1,0 +1,37 @@
+\documentclass[11pt]{article}
+
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{kpfonts}
+\usepackage[
+paperwidth = 148 mm,
+paperheight = 210 mm,
+left = 1 cm,
+right = 1 cm,
+top = 1 cm,
+bottom = 1 cm
+]{geometry}
+\begin{document}
+\section{\underline{Центральная предельная теорема}}
+    \newtheorem{thm}{Теорема}[section]
+    \begin{thm}[Линдеберга]
+    	Пусть $\{\xi_k\}_(k>=1)$~--- независимая случайная величина, $E \xi_k^2 < +\infty \forall k$, обозначим $m_k = E \xi_k$, $\sigma_k^2 = D\xi_k > 0$; $S_n = \sum_{i = 1}^{n} \xi_i$; $D^2_n = \sum_{k = 1}^{n} \sigma_k^2$ и $F_k(x)$~--- функция распределения $\xi_k$. Пусть выполнено условие Линдеберга, т.е.
+    	$$
+    	\forall \varepsilon > 0 \frac{1}{D_n^2} \sum_{k = 1}^{n} \int\limits_{\{x:|x-m_k| > \varepsilon D_n \}} (x-m_k)^2 d~F_k(x) \xrightarrow[\mathsf{n} \rightarrow \infty] 0
+    	$$.
+    	Тогда $\frac{S_n - E S_n}{\sqrt{DS_n}} \overset{d}{\longrightarrow} \infty $.
+    \end{thm}
+\section{\underline{Гауссовские случайные векторы}}
+\newtheorem{definition}[section]{Определение}
+\begin{definition}
+Случайный вектор $\overrightarrow{\xi} ~ N()$~--- гаусс., если его характеристическая функция
+
+$$
+\varphi\xi(\vec{t}) = exp(i(\vec{m},\vec{t}) - \frac{1}{2}(\sum \vec{t},\vec{t})), \vec{m}\in\mathds{R}^n, \sum
+$$
+~--- сумма.
+\end{definition}
+\end{document}
