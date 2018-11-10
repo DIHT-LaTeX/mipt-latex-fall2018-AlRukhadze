@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\pagestyle{empty}
+
+\usepackage[
+paperwidth = 19 cm,
+paperheight = 28 cm,
+left = 1 cm,
+right = 1 cm,
+top = 1 cm,
+bottom = 1 cm
+]{geometry}
+
+\begin{document}
+
+\begin{tikzpicture}
+	\draw[step=1mm, lightgray] (0, 0) grid (16, 25);
+	\draw[step=5mm, gray] (0, 0) grid (16, 25);
+	\draw[step=10mm, black] (0, 0) grid (16, 25);
+\end{tikzpicture}
+
+\end{document}

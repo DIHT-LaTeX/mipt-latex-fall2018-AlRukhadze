@@ -1,0 +1,67 @@
+\documentclass[twoside]{article}
+
+\usepackage[
+paperwidth = 19 cm,
+paperheight = 28 cm,
+left = 2 cm,
+right = 2 cm,
+top = 2.5 cm,
+bottom = 2.5 cm
+]{geometry}
+\usepackage{color}
+\definecolor{lightblue}{rgb}{0.91,0.96,1}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\pgfplotsset{
+	width = 15 cm,
+	x label style = {font = {\small\sffamily}, yshift = .5 pc},
+	tick label style = {font = {\scriptsize}},
+	y label style = {font = {\small\sffamily}, yshift = .5 pc},
+	every tick/.style = {black, line width = .5 pt},
+	axis line style = {line width = .5 pt},
+	grid style = {gray, dotted},
+	minor x tick num = 5,
+	minor y tick num = 5,
+	grid = major,
+}
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[CO]{\leftmark}
+\fancyhead[LO]{\rightmark} 
+\fancyhead[CO]{Домашнее задание №4} 
+\fancyhead[CE]{15 ноября 2018} 
+
+\lstset{ 
+			    backgroundcolor=\color{lightblue},
+			    basicstyle=\scriptsize\ttfamily,
+			    breaklines=true, 
+			    frame=single,
+			    keywordstyle=\color{blue},
+			    language=Python,
+			    morekeywords={*,...},
+			    numbers=left,
+			    numbersep=5pt, 
+			    numberstyle=\tiny\sffamily\color{gray},
+			    stringstyle=\color{red},  
+			    tabsize=4,
+			}
+\lstinputlisting[language=Python]{gen.py}
+
+\newpage
+
+\centering
+\begin{tikzpicture}
+	\begin{axis}[grid = major, xlabel = {$x$ координата}, ylabel = {$y$ координата}, title = {Синтетические экспериментальные данные исследования линейной зависимости}]
+		\addplot+[domain = -10:10, gray, line width = 1.1pt, no marks]{3.0612*x+2.6882};
+		\addplot+[x=x, y=y, blue, mark size = 1.0pt, mark = *, only marks] table{data.txt};
+	\end{axis}
+\end{tikzpicture}
+
+\end{document}
