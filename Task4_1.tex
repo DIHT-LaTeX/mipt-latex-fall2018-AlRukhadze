@@ -1,0 +1,27 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\pagestyle{empty}
+
+\usepackage{color}
+\definecolor{lightorange}{rgb}{1,0.7,0.5}
+\definecolor{midorange}{rgb}{1,0.67,0.37}
+
+\usepackage[
+paperwidth = 19 cm,
+paperheight = 28 cm,
+left = 1 cm,
+right = 1 cm,
+top = 1 cm,
+bottom = 1 cm
+]{geometry}
+
+\begin{document}
+
+\begin{tikzpicture}
+	\draw[step=1mm, lightorange] (0, 0) grid (16, 25);
+	\draw[step=5mm, midorange] (0, 0) grid (16, 25);
+	\draw[step=10mm, orange] (0, 0) grid (16, 25);
+\end{tikzpicture}
+
+\end{document}
