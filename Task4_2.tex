@@ -60,7 +60,7 @@ bottom = 2.5 cm
 \begin{tikzpicture}
 	\begin{axis}[grid = major, xlabel = {$x$ координата}, ylabel = {$y$ координата}, title = {Синтетические экспериментальные данные исследования линейной зависимости}]
 		\addplot+[domain = -10:10, gray, line width = 1.1pt, no marks]{3.0612*x+2.6882};
-		\addplot+[x=x, y=y, blue, mark size = 1.0pt, mark = *] table{data.txt};
+		\addplot+[x=x, y=y, blue, mark size = 1.0pt, mark = *, only marks] table{data.txt};
 	\end{axis}
 \end{tikzpicture}
 
