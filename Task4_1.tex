@@ -3,10 +3,6 @@
 \usepackage{tikz}
 \pagestyle{empty}
 
-\usepackage{color}
-\definecolor{lightorange}{rgb}{1,0.7,0.5}
-\definecolor{midorange}{rgb}{1,0.67,0.37}
-
 \usepackage[
 paperwidth = 19 cm,
 paperheight = 28 cm,
@@ -19,9 +15,9 @@ bottom = 1 cm
 \begin{document}
 
 \begin{tikzpicture}
-	\draw[step=1mm, lightorange] (0, 0) grid (16, 25);
-	\draw[step=5mm, midorange] (0, 0) grid (16, 25);
-	\draw[step=10mm, orange] (0, 0) grid (16, 25);
+	\draw[step=1mm, lightgray] (0, 0) grid (16, 25);
+	\draw[step=5mm, gray] (0, 0) grid (16, 25);
+	\draw[step=10mm, black] (0, 0) grid (16, 25);
 \end{tikzpicture}
 
 \end{document}
